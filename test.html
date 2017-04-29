@@ -1,0 +1,42 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1> should be blue </h1>
+    <p> should be green </p>
+    <div id='three'>should be red
+    </div>
+    <div id='everything'> should be big </div>
+    <div id='holder'> should have black border </div>
+    <ul>
+      <li>
+        1
+        2
+        3
+        4
+      </li>
+    </ul>
+    <div id='secret'> shouldn't see this </div>
+    <div id='changeMe'> you didn't change me </div>
+    <div id='everything'> should be list </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+      $('#three').css('background-color', 'red'); //2
+      $('h1').css('background-color', 'blue'); //3
+      $('#everything').css('font-size', '100px'); //4
+      $('#holder').css('border', '2px solid black'); //5
+      $('ul').css('font-weight', 'bold'); //6
+      $('h1 + p').css('color','green'); //7
+      $('#secret').css('display','none'); //8 , 9
+      $('#changeMe').text("you changed me! "); //10
+      $('#changeMe').append("I added stuff") //11
+      $('#changeMe').html("<p> paragraph paragraph </p> <p> oh look another paragraph </p>"); //12
+      $('#changeMe').append("<p> blah blah blah </p>"); //13
+      $('li').text("changed the list"); //14
+      $('#everything').append("<li> here is a list </li> <li> oh look another list </li>"); // 16
+    </script>
+  </body>
+</html>
